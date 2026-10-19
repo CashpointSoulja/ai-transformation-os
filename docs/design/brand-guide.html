@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visual brand guide · AI Transformation OS</title>
+<style>
+  @font-face { font-family: "GitLab Sans"; src: url("../../public/fonts/GitLabSans.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "GitLab Mono"; src: url("../../public/fonts/GitLabMono.woff2") format("woff2"); font-display: swap; }
+  :root {
+    --charcoal:#171321; --white:#fff; --o1:#FCA326; --o2:#FC6D26; --o3:#E24329; --p1:#A989F5; --p2:#7759C2; --p4s:#232150;
+    --canvas:#ECECEF; --text:#3A383D; --subtle:#646163; --strong:#18171D; --border:#DCDBD9; --link:#27599F;
+    --sans:"GitLab Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --mono:"GitLab Mono",ui-monospace,Menlo,monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:var(--sans); color:var(--text); background:var(--canvas); font-size:14px; line-height:1.5; font-feature-settings:"liga" 1; }
+  .wrap { max-width:1120px; margin:0 auto; padding:24px 16px 64px; }
+  header.hero { background:var(--charcoal); color:#fff; border-radius:12px; padding:40px; position:relative; overflow:hidden; }
+  header.hero::after { content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--o1),var(--p1)); }
+  header.hero h1 { font-size:44px; line-height:1.05; letter-spacing:-0.045em; margin:12px 0 8px; font-weight:700; }
+  header.hero p { color:#D1D0D3; max-width:640px; margin:0; font-size:16px; line-height:1.35; }
+  .eyebrow { font-family:var(--mono); font-size:12px; background:linear-gradient(90deg,var(--o1),var(--p1)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  section { background:#fff; border-radius:12px; padding:28px; margin-top:16px; }
+  h2 { font-size:21px; color:var(--strong); margin:0 0 4px; font-weight:600; letter-spacing:-0.01em; }
+  h3 { font-size:14px; color:var(--strong); margin:20px 0 8px; font-weight:600; }
+  .lede { color:var(--subtle); margin:0 0 20px; max-width:720px; }
+  .grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); }
+  .sw { border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+  .sw .chip { height:72px; }
+  .sw .meta { padding:8px 10px; font-size:12px; }
+  .sw .meta b { display:block; color:var(--strong); font-weight:600; }
+  .sw .meta code { font-family:var(--mono); color:var(--subtle); }
+  .logo-row { display:flex; gap:16px; flex-wrap:wrap; align-items:stretch; }
+  .logo-box { flex:1 1 220px; border:1px solid var(--border); border-radius:8px; padding:24px; display:flex; flex-direction:column; gap:12px; align-items:flex-start; }
+  .logo-box.dark { background:var(--charcoal); color:#fff; border-color:var(--charcoal); }
+  .logo-box img { height:48px; }
+  .logo-box small { color:inherit; opacity:.8; }
+  .clear { position:relative; padding:14px; outline:1px dashed var(--p2); }
+  .dont { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:12px; }
+  .dont div { border:1px solid #FFD3D7; background:#FEEEF0; color:#AC203A; border-radius:8px; padding:12px; font-size:12px; display:flex; flex-direction:column; gap:8px; align-items:center; text-align:center; }
+  .dont img { height:36px; }
+  .type-row { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:14px 0; border-top:1px solid #ECEBEA; align-items:baseline; }
+  .type-row:first-of-type { border-top:0; }
+  .type-row .spec { font-family:var(--mono); font-size:12px; color:var(--subtle); }
+  .shell { border:1px solid var(--border); border-radius:12px; overflow:hidden; background:var(--canvas); }
+  .shell .top { height:48px; display:flex; align-items:center; gap:12px; padding:0 12px; }
+  .shell .top img { height:24px; }
+  .shell .top .crumb { font-size:14px; color:var(--strong); font-weight:600; }
+  .shell .top .search { margin-left:auto; width:300px; height:32px; border-radius:8px; border:1px solid #BFBFC3; background:#fff; color:var(--subtle); display:flex; align-items:center; padding:0 10px; font-size:14px; }
+  .shell .body { display:grid; grid-template-columns:200px 1fr; padding:0 8px 8px; gap:8px; }
+  .shell nav a { display:block; height:28px; line-height:28px; padding:0 8px; border-radius:8px; color:#626168; text-decoration:none; font-size:14px; }
+  .shell nav a.on { background:#DCDCDE; color:#18171D; font-weight:600; }
+  .shell .panel { background:#fff; border-radius:12px; padding:16px 20px; min-height:200px; }
+  .btn { display:inline-flex; align-items:center; height:32px; padding:0 12px; border-radius:8px; font:inherit; font-size:14px; border:0; cursor:pointer; }
+  .btn-confirm { background:#3A383D; color:#fff; }
+  .btn-default { background:#fff; color:#28272D; box-shadow:inset 0 0 0 1px #BFBFC3; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:8px 0; }
+  .badge { display:inline-flex; align-items:center; border-radius:999px; font-size:12px; line-height:16px; padding:2px 6px; }
+  .b-success{background:#BEE6D0;color:#0B645A}.b-warning{background:#FADA9C;color:#9E3811}.b-danger{background:#FFD3D7;color:#AC203A}.b-info{background:#C8E0F9;color:#27599F}.b-tier{background:#E1DAF7;color:#5B46B8}.b-neutral{background:#DCDBD9;color:#4D4B4E}
+  .label { display:inline-flex; border-radius:12px; font-size:12px; line-height:16px; overflow:hidden; box-shadow:inset 0 0 0 2px var(--c); }
+  .label .k { background:var(--c); color:#fff; padding:2px 6px; }
+  .label .v { background:#fff; color:#18171D; padding:2px 8px 2px 4px; }
+  .label.dark .k { color:#18171D; }
+  .alert { border-radius:8px; padding:12px 16px; display:flex; gap:10px; }
+  .alert-danger { background:#FEEEF0; color:#3A383D; }
+  .alert-danger b { color:#AC203A; }
+  .row-item { border-top:1px solid #ECEBEA; padding:10px 16px; display:flex; justify-content:space-between; gap:12px; }
+  .row-item .t { color:var(--strong); font-weight:600; }
+  .row-item .m { color:var(--subtle); font-size:12px; }
+  .grad { height:56px; border-radius:8px; }
+  footer { color:var(--subtle); font-size:12px; margin-top:24px; }
+  @media (max-width:640px){ .type-row{grid-template-columns:1fr} header.hero{padding:24px} header.hero h1{font-size:32px} .shell .body{grid-template-columns:1fr} .shell nav{display:none} .shell .top .search{display:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <img src="assets/tanuki.svg" alt="GitLab tanuki" height="40">
+    <div class="eyebrow" style="margin-top:20px">visual brand guide · v1</div>
+    <h1>AI Transformation OS</h1>
+    <p>Visual rules for the Product &amp; Design build, taken from GitLab's Pajamas source, the <code>@gitlab/ui</code> design tokens, and measurements of the live gitlab.com interface. Read with <a href="DESIGN.md" style="color:var(--p1)">DESIGN.md</a>.</p>
+  </header>
+
+  <section>
+    <h2>Logo</h2>
+    <p class="lede">The official full-colour tanuki from <code>@gitlab/svgs</code>, unmodified. It sits top-left in a 48px bar at 24px tall, the way gitlab.com does it. Clear space is at least the x-height of the wordmark's "a".</p>
+    <div class="logo-row">
+      <div class="logo-box"><span class="clear"><img src="assets/tanuki.svg" alt="Tanuki on white"></span><small>Full colour on white, the default</small></div>
+      <div class="logo-box dark"><span class="clear" style="outline-color:var(--p1)"><img src="assets/tanuki.svg" alt="Tanuki on Charcoal"></span><small>Full colour on Charcoal #171321, the statement block</small></div>
+      <div class="logo-box" style="background:var(--canvas)"><img src="assets/tanuki.svg" alt="Tanuki at 24px" style="height:24px"><small>24px in the top bar (the digital minimum is 20px)</small></div>
+    </div>
+    <h3>Never</h3>
+    <div class="dont">
+      <div><img src="assets/tanuki.svg" alt="" style="filter:hue-rotate(160deg)">Recolour</div>
+      <div><img src="assets/tanuki.svg" alt="" style="transform:rotate(-20deg)">Rotate</div>
+      <div><img src="assets/tanuki.svg" alt="" style="filter:drop-shadow(3px 3px 2px #0008)">Add shadows or effects</div>
+      <div><img src="assets/tanuki.svg" alt="" style="transform:scaleX(1.6)">Distort</div>
+      <div><span style="font-size:28px">🦝</span>Make a mascot</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Brand palette</h2>
+    <p class="lede">From Pajamas <code>brand-design/color.md</code>. Headlines and body copy use white or Charcoal only. On light backgrounds, links use Purple 02p.</p>
+    <div class="grid">
+      <div class="sw"><div class="chip" style="background:#171321"></div><div class="meta"><b>Charcoal</b><code>#171321</code></div></div>
+      <div class="sw"><div class="chip" style="background:#fff;border-bottom:1px solid #ECEBEA"></div><div class="meta"><b>White</b><code>#FFFFFF</code></div></div>
+      <div class="sw"><div class="chip" style="background:#FCA326"></div><div class="meta"><b>Orange 01p</b><code>#FCA326</code></div></div>
+      <div class="sw"><div class="chip" style="background:#FC6D26"></div><div class="meta"><b>Orange 02p</b><code>#FC6D26</code></div></div>
+      <div class="sw"><div class="chip" style="background:#E24329"></div><div class="meta"><b>Orange 03p</b><code>#E24329</code></div></div>
+      <div class="sw"><div class="chip" style="background:#A989F5"></div><div class="meta"><b>Purple 01p</b><code>#A989F5</code></div></div>
+      <div class="sw"><div class="chip" style="background:#7759C2"></div><div class="meta"><b>Purple 02p</b><code>#7759C2</code></div></div>
+      <div class="sw"><div class="chip" style="background:#232150"></div><div class="meta"><b>Purple 04s</b><code>#232150</code></div></div>
+      <div class="sw"><div class="chip" style="background:#6FDAC9"></div><div class="meta"><b>Teal 02s</b><code>#6FDAC9</code></div></div>
+      <div class="sw"><div class="chip" style="background:#45424D"></div><div class="meta"><b>Gray 04</b><code>#45424D</code></div></div>
+    </div>
+    <h3>AI gradient: Orange 01p → Purple 01p</h3>
+    <p class="lede" style="margin-bottom:8px">Pajamas reserves this for AI-focused content. It's used once, on the statement's accent rule and eyebrow.</p>
+    <div class="grad" style="background:linear-gradient(90deg,#FCA326,#A989F5)"></div>
+  </section>
+
+  <section>
+    <h2>Product palette</h2>
+    <p class="lede">From the <code>@gitlab/ui</code> semantic tokens, plus the live gitlab.com canvas. The product UI uses only these colours.</p>
+    <div class="grid">
+      <div class="sw"><div class="chip" style="background:#ECECEF"></div><div class="meta"><b>Canvas</b><code>#ECECEF</code></div></div>
+      <div class="sw"><div class="chip" style="background:#F7F7F5"></div><div class="meta"><b>bg subtle</b><code>#F7F7F5</code></div></div>
+      <div class="sw"><div class="chip" style="background:#3A383D"></div><div class="meta"><b>text default · confirm</b><code>#3A383D</code></div></div>
+      <div class="sw"><div class="chip" style="background:#646163"></div><div class="meta"><b>text subtle</b><code>#646163</code></div></div>
+      <div class="sw"><div class="chip" style="background:#18171D"></div><div class="meta"><b>text strong</b><code>#18171D</code></div></div>
+      <div class="sw"><div class="chip" style="background:#27599F"></div><div class="meta"><b>link</b><code>#27599F</code></div></div>
+      <div class="sw"><div class="chip" style="background:#DCDBD9"></div><div class="meta"><b>border default</b><code>#DCDBD9</code></div></div>
+      <div class="sw"><div class="chip" style="background:#DCDCDE"></div><div class="meta"><b>nav selected</b><code>#DCDCDE</code></div></div>
+    </div>
+    <h3>Status badges</h3>
+    <div class="row">
+      <span class="badge b-success">Healthy</span><span class="badge b-warning">Degraded</span><span class="badge b-danger">Failing</span><span class="badge b-info">In review</span><span class="badge b-tier">AI</span><span class="badge b-neutral">Paused</span>
+    </div>
+    <h3>Scoped labels (measured: 20px, 12px radius, 2px inset border)</h3>
+    <div class="row">
+      <span class="label" style="--c:#428BCA"><span class="k">workflow</span><span class="v">triaged</span></span>
+      <span class="label" style="--c:#E24329"><span class="k">tier</span><span class="v">now</span></span>
+      <span class="label" style="--c:#FC6D26"><span class="k">tier</span><span class="v">next</span></span>
+      <span class="label" style="--c:#7759C2"><span class="k">tier</span><span class="v">later</span></span>
+      <span class="label" style="--c:#6699CC"><span class="k">theme</span><span class="v">research-ops</span></span>
+      <span class="label" style="--c:#330066"><span class="k">effort</span><span class="v">M</span></span>
+      <span class="label dark" style="--c:#F0AD4E"><span class="k">team</span><span class="v">ux-research</span></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Type</h2>
+    <p class="lede">GitLab Sans for everything, GitLab Mono for code, IDs, scores and skill files. Both are self-hosted from <code>@gitlab/fonts</code> (OFL-1.1). Sentence case, left-aligned, ligatures on.</p>
+    <div class="type-row"><div class="spec">Statement headline<br>Bold · 105% · −4.5%</div><div style="font-size:40px;font-weight:700;line-height:1.05;letter-spacing:-0.045em;color:var(--strong)">Your issue is uneven AI adoption.</div></div>
+    <div class="type-row"><div class="spec">Statement body<br>Regular · 135%</div><div style="font-size:18px;line-height:1.35">Some teams find value fast and others never find an entry point.</div></div>
+    <div class="type-row"><div class="spec">Page title<br>24px · 600</div><div style="font-size:24px;font-weight:600;color:var(--strong)">Triage backlog</div></div>
+    <div class="type-row"><div class="spec">Body<br>14px / 21px · 400</div><div>Synthesizing usability sessions takes each researcher about six hours per study.</div></div>
+    <div class="type-row"><div class="spec">Meta<br>12px · subtle</div><div style="font-size:12px;color:var(--subtle)">#AI-104 · submitted 3 days ago by Priya Raman · UX Research</div></div>
+    <div class="type-row"><div class="spec">Mono<br>GitLab Mono</div><div style="font-family:var(--mono)">100x = volume 4 × frequency 5 × pain 4 = 80</div></div>
+  </section>
+
+  <section>
+    <h2>Shell and components</h2>
+    <p class="lede">The gitlab.com paneled layout, as measured: a 48px top bar on the grey canvas, a 240px sidebar with 28px nav items, and a white panel with a 12px radius.</p>
+    <div class="shell">
+      <div class="top"><img src="assets/tanuki.svg" alt="GitLab"><span class="crumb">Product &amp; Design · AI Transformation</span><span class="search">Search or go to…</span></div>
+      <div class="body">
+        <nav><a>Overview</a><a>Intake</a><a class="on">Triage backlog</a><a>Agent fleet</a><a>Champions</a><a>Skills library</a></nav>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div style="font-size:24px;font-weight:600;color:var(--strong)">Triage backlog</div><div class="row"><button class="btn btn-default">Board</button><button class="btn btn-confirm">New request</button></div></div>
+          <div class="alert alert-danger" style="margin:12px 0"><b>3 agents have no owner.</b> You're accountable for them until they're assigned.</div>
+          <div class="row-item"><div><div class="t">Auto-synthesize usability session notes into insight cards</div><div class="m">#AI-104 · UX Research · 3 days ago</div><div class="row"><span class="label" style="--c:#E24329"><span class="k">tier</span><span class="v">now</span></span><span class="label" style="--c:#6699CC"><span class="k">theme</span><span class="v">research-ops</span></span><span class="label" style="--c:#330066"><span class="k">effort</span><span class="v">M</span></span></div></div><div style="font-family:var(--mono);font-size:20px;color:var(--strong)">84</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Sources: Pajamas (design.gitlab.com source), the GitLab handbook source, @gitlab/svgs, @gitlab/fonts and @gitlab/ui. GITLAB and the tanuki logo are trademarks of GitLab Inc.</footer>
+</div>
+</body>
+</html>
