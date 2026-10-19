@@ -1,0 +1,156 @@
+1
+00:00:00,601 --> 00:00:03,851
+I read the AI Transformation Owner job description.
+
+2
+00:00:04,001 --> 00:00:10,317
+Your issue is uneven AI adoption: scattered
+requests, agents without owners, priorities churning.
+
+3
+00:00:10,467 --> 00:00:16,917
+I've solved this before: product ops at Corgi, and
+an AI-agent operating system for my own company.
+
+4
+00:00:17,067 --> 00:00:21,984
+So I built the system the AI Transformation
+Owner runs. It's working, today.
+
+5
+00:00:22,134 --> 00:00:28,383
+Every request moves Raise → Triage → Scout →
+Deliver → Share, the flow in GitLab’s own handbook.
+
+6
+00:00:28,533 --> 00:00:34,419
+Up top: hours on the table, agents with
+no owner, evals passing and weekly AI use.
+
+7
+00:00:34,569 --> 00:00:40,533
+And the problem itself, in one chart: weekly
+AI use runs from 25% to 91% by sub-team.
+
+8
+00:00:40,633 --> 00:00:45,549
+Intake: anyone in Product & Design
+describes a pain point in plain language.
+
+9
+00:00:45,699 --> 00:00:52,309
+No template. Numbers help, and if they’re
+missing the agent estimates and says so.
+
+10
+00:00:52,459 --> 00:00:58,243
+The triage agent reads it live. First, the
+workflow it touches, with the evidence quoted.
+
+11
+00:00:58,393 --> 00:01:04,844
+Then the 100x potential: volume × frequency × pain,
+each traced to the request or a labelled prior.
+
+12
+00:01:04,994 --> 00:01:09,844
+Effort checks the skills library and
+the fleet first: consume before build.
+
+13
+00:01:09,994 --> 00:01:15,111
+Then it groups the theme, weighs it
+against this half’s outcomes, and ranks it.
+
+14
+00:01:15,261 --> 00:01:19,338
+Last, a two-sentence rationale an executive can read.
+
+15
+00:01:24,700 --> 00:01:30,681
+The backlog: every request ranked, labelled
+the GitLab way, with its rationale inline.
+
+16
+00:01:30,831 --> 00:01:45,521
+Open any item and the whole reasoning
+trace is there. Nothing is a black box.
+
+17
+00:01:45,671 --> 00:01:52,904
+Board by tier: Now, Next, Later and Park,
+with the hours each tier would return.
+
+18
+00:01:53,054 --> 00:01:59,467
+Broken tools and access requests skip the queue
+and route straight to the Enterprise AI Hub.
+
+19
+00:01:59,567 --> 00:02:07,508
+The agent fleet: every agent with its
+owner, KPIs, eval and last-run health.
+
+20
+00:02:07,658 --> 00:02:14,276
+Three agents have no owner. Until
+they do, I'm accountable for them.
+
+21
+00:02:14,426 --> 00:02:20,677
+This one closes issues on its own, with no owner
+and no eval. That's the risk this view catches.
+
+22
+00:02:20,827 --> 00:02:25,211
+Assign an owner from the sub-team, and the alert updates.
+
+23
+00:02:31,867 --> 00:02:37,184
+The Champion hub: one Champion per sub-team,
+at five to ten percent of their time.
+
+24
+00:02:37,334 --> 00:02:43,451
+Cadence follows GitLab's operating rhythm:
+fortnightly syncs, office hours and a monthly demo.
+
+25
+00:02:43,601 --> 00:02:51,694
+The builder spectrum shows where each team
+is, and where my coaching time goes first.
+
+26
+00:02:51,844 --> 00:02:56,376
+Gaps are shown, not hidden: two
+sub-teams still need a Champion.
+
+27
+00:02:56,526 --> 00:03:01,910
+And the demo wall: what teams shipped,
+with the number that proves it.
+
+28
+00:03:02,200 --> 00:03:08,048
+The skills library: the instruction sets
+agents run on. Shared, versioned, owned.
+
+29
+00:03:08,198 --> 00:03:14,928
+Every skill has an owner, a version history
+and the five-question promotion checklist.
+
+30
+00:03:15,078 --> 00:03:20,616
+Copy, link or download it, so the
+whole function runs on the same skill.
+
+31
+00:03:21,734 --> 00:03:27,651
+Intake, triage, fleet and adoption: the AI
+Transformation Owner's job, as working software.
+
+32
+00:03:27,801 --> 00:03:32,733
+Built for GitLab Product & Design.
+Open the link and try it yourself.

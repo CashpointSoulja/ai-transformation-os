@@ -1,6 +1,6 @@
 # Test plan and results
 
-**Build under test:** `main` bundle, 2026-10-19 · **Environment:** Node 22, Chromium (Playwright 1.56), Linux
+**Build under test:** v1 bundle (the build deployed to Cloudflare), 2026-10-19 · **Environment:** Node 22, Chromium (Playwright 1.56), Linux
 **Result:** ✅ typecheck clean · ✅ 29/29 unit tests · ✅ 16/16 end-to-end tests · ✅ production build · ✅ manual visual pass. Raw outputs are in [`test-results/`](test-results/).
 
 ## 1. Scope and strategy
