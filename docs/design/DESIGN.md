@@ -13,7 +13,7 @@ Visual companion: [`brand-guide.html`](./brand-guide.html). Open it in a browser
 | Pajamas design system source (`gitlab-org/gitlab-services/design.gitlab.com`, `contents/brand-*`) | Brand colour palette with hex values, typography rules, logo and logomark rules, brand voice, core visual elements | Read the raw Markdown through the public gitlab.com API. This is the source behind design.gitlab.com. |
 | GitLab handbook source (`gitlab-com/content-sites/handbook`) | Brand Experience pages, trademark guidelines, Canva brand-kit rules (Inter fallback, white or Charcoal text) | Read the raw Markdown through the gitlab.com API, plus a sparse git clone |
 | `@gitlab/svgs` 3.168.0 (npm, MIT) | The official tanuki logomark SVG (`illustrations/gitlab_logo.svg`) and product icons (`sprite_icons/*`) | `npm pack` |
-| `@gitlab/fonts` 1.3.1 (npm, OFL-1.1) | GitLab Sans (variable) and GitLab Mono `.woff2` files, self-hosted under `public/fonts/` | `npm pack` |
+| `@gitlab/fonts` 1.3.1 (npm, OFL-1.1) | GitLab Sans (variable) and GitLab Mono `.woff2` files, self-hosted under `src/assets/fonts/` | `npm pack` |
 | `@gitlab/ui` 138.6.1 (npm, MIT) | Product design tokens (`src/tokens/build/css/tokens.css`): neutral, blue, green, orange, red and purple ramps; text, border and background semantics; badge and feedback colours; radii; shadows | `npm pack` |
 | gitlab.com product UI (Work items list, Issue boards), visited as an anonymous user | Layout measurements: 48px top bar, 240px super sidebar on a grey canvas, white rounded content panel, 28px nav items with an 8px radius, scoped labels, 32px charcoal confirm buttons | Headless browser, `getComputedStyle` on live elements, plus screenshots in `assets/` |
 
