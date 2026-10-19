@@ -5,7 +5,7 @@
 **The intake, triage, fleet and adoption system the AI Transformation Owner runs, working today.**
 
 ▶ **Live demo:** https://ai-transformation-os.ayomideahmedcp.workers.dev (open link, no sign-in)
-🎬 **Walkthrough (3½ min, silent with captions):** __VIDEO_LINK__ · also in the repo at [`docs/video/walkthrough.mp4`](docs/video/walkthrough.mp4)
+🎬 **Walkthrough (3½ min, silent with captions):** https://drive.google.com/file/d/1BSe8tVLCsuQabeaQk3afHzT4aEETTxfE/view · also in the repo at [`docs/video/walkthrough.mp4`](docs/video/walkthrough.mp4)
 
 ---
 

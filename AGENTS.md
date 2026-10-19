@@ -5,6 +5,7 @@
 **AI Transformation OS · Product & Design** is the operating system an AI Transformation Owner (ATO) runs for GitLab's Product & Design function. It has five modules: intake, triage agent, agent fleet registry, Champion hub and skills library. It's an independent concept built as a job artifact for GitLab's *AI Transformation Owner, Product & Design* role.
 
 - Live: https://ai-transformation-os.ayomideahmedcp.workers.dev (Cloudflare Worker, open link, no sign-in)
+- Walkthrough: https://drive.google.com/file/d/1BSe8tVLCsuQabeaQk3afHzT4aEETTxfE/view (silent; voiceover script in `docs/video/`)
 - Stack: Vite 5 + React 18 + TypeScript (strict), no backend, hash routing, `localStorage` for visitor submissions
 
 ## Non-negotiables
