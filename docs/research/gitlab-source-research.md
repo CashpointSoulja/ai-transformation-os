@@ -11,7 +11,7 @@ Source: https://handbook.gitlab.com/handbook/eta/ai/
 - "GitLab is becoming an AI-first company. Enterprise AI is the AI backbone of that transition internally."
 - Goal: "friction removal… Institutional memory becomes queryable. Repeatable work becomes an agent's job. Humans direct, agents handle the parts that do not need judgement."
 - "Enterprise AI is GitLab being Customer Zero for the patterns we want our customers to feel."
-- Owns the AI platform: **Glean** (personal AI / knowledge), **Claude** (desktop AI: drafting, reasoning, code, agentic tasks), **Relevance.ai** (company-wide autonomous agents). Leads with **GitLab + Duo Agent Platform** "wherever they fit". It is the "single interface to CorpSec, Legal, and Privacy for AI tooling".
+- Owns the AI platform: **Glean** (personal AI / knowledge), a **desktop AI assistant** (drafting, reasoning, code, agentic tasks), **Relevance.ai** (company-wide autonomous agents). Leads with **GitLab + Duo Agent Platform** "wherever they fit". It is the "single interface to CorpSec, Legal, and Privacy for AI tooling".
 - Intake: Slack `#enterprise-ai-collab` and an **"Enterprise AI Intake Request"** (an epic work item in `gitlab-com/eta/ent-ai`, which is private).
 - Org placement: part of Enterprise Technology and AI (ETA), under the CIO.
 - Relevance.ai "is not self-service today. Use cases come through Enterprise AI or your function's AI Transformation Owner (ATO)" (https://handbook.gitlab.com/handbook/eta/ai/tools/relevance-ai/).
@@ -92,11 +92,11 @@ Source: https://handbook.gitlab.com/handbook/eta/ai/strategy/prompts-are-process
 - Three ownership scopes: **Function-scoped** (owner = function exec, with the ATO maintaining the canonical version), **Repo-scoped** (CODEOWNERS; git), **Company-wide** (central function, with ETA as the interim home; "commit and iterate").
 - Posture is **"guided creation"**: "Anyone can build, anyone can experiment… What is gated, on purpose, is the step from personal use to canonical, shared process."
 - **5-question promotion checklist**: Whose process does this encode? What's the right scope? Is the owner identified and ready? Is it versioned and reviewable? Does the owner want this to be how their domain operates? "If you cannot, you have a prototype, and the next step is conversation rather than rollout."
-- Platform mapping: Glean's **Department Agent Moderator** "is the closest platform analogue to the ATO". In Claude Code, skills live in `.claude/skills/` and are reviewed by MR. Company-wide resources go in an "AI marketplace" (`gitlab-com/marketplace`, private). Claude connectors/skill sharing are org-wide, so function scoping there is "an **ownership control, not a technical one**".
+- Platform mapping: Glean's **Department Agent Moderator** "is the closest platform analogue to the ATO". In the approved AI coding assistant, skills live in a repo skills folder and are reviewed by MR. Company-wide resources go in an "AI marketplace" (`gitlab-com/marketplace`, private). The desktop assistant's connectors and skill sharing are org-wide, so function scoping there is "an **ownership control, not a technical one**".
 
 ### 1.8 Upstream Studios (design org) AI usage
 Source: https://handbook.gitlab.com/handbook/upstream-studios/how-we-work/ai-usage/
-- Approved tools: Claude, Claude Design, Claude Code, Dovetail and Rally (transcription), FigJam, Figma Design, GitLab Duo. Figma Make is credit-limited.
+- Approved tools: the desktop AI assistant and its design and coding variants, Dovetail and Rally (transcription), FigJam, Figma Design, GitLab Duo. Figma Make is credit-limited.
 - "What AI is not for": "Replacing real users", "Final designs without review", "Skipping Pajamas", "Production output without checking".
 - Experience Research: "We build and use AI skills and agents across all our processes… set the guardrails and gate the quality." They run a weekly AI-generated summary and an "AI-powered research library" (https://handbook.gitlab.com/handbook/upstream-studios/experience-research/).
 
@@ -157,7 +157,7 @@ Source: https://handbook.gitlab.com/handbook/product-development/how-we-work/pro
   - Ship bar is the **Minimum Lovable Product**. Decisions are classified **reversible vs irreversible**, and teams "optimize for a decision, not consensus".
   - Say/do ratio measures predictability. PMs target "at least 10 customers per month". New features go to Customer Zero first.
   - Cadence: weekly 30-min sync, **monthly milestone kickoff (45 min)**, monthly retro (45 min). "We record the calls and use AI to take notes."
-  - Prototypes: "Anyone can build a prototype. Each one starts with a named question and a named DRI." Two kinds: concept prototypes (Figma, Claude artifacts) and working prototypes (in-repo).
+  - Prototypes: "Anyone can build a prototype. Each one starts with a named question and a named DRI." Two kinds: concept prototypes (Figma, AI-generated artifacts) and working prototypes (in-repo).
   - Customer outcomes: ship with higher quality and velocity; automate with confidence; expand capacity; build and compose; trust and operate. Value signals: Adoption, Retention, Time to value, Reliability.
 - **R&D Interlock** (https://handbook.gitlab.com/handbook/product-development/how-we-work/r-and-d-interlock/): aligns PM, UX and Engineering on roadmap planning. It covers the Resource Allocation Framework, the Roadmap Structure and the R&D Alignment Process.
 

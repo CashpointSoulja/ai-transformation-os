@@ -106,11 +106,10 @@ GitLab's scoped labels (`key::value`) are the single most recognisable product p
 - Value segment: white background, `#18171D` text, padding `2px 8px 2px 4px`.
 - Border: `inset 0 0 0 2px <label colour>`.
 
-The label set I use (colours follow GitLab's own label conventions where they exist):
+The label set I use (colours follow GitLab's own label conventions where they exist). Lifecycle is **not** a label: GitLab replaced `workflow::*` labels with work item statuses in 2026, so request lifecycle (Raised → Triaged → Scouting → Delivering → Shared, plus Won't do and Routed to Hub) renders as status pills, like the live product's status badges.
 
 | Scope | Values | Colour |
 |---|---|---|
-| `workflow::` | new, triaged, in build, shipped, declined | `#428BCA` (GitLab's workflow blue) |
 | `tier::` | now, next, later, park | now `#E24329`, next `#FC6D26`, later `#7759C2`, park `#74717A` |
 | `theme::` | research-ops, design-quality, release-comms, triage-planning, stakeholder-comms, docs-content, data-insight | `#6699CC`-style category blue family |
 | `effort::` | S, M, L, XL | `#330066` (GitLab's type-label purple) |
@@ -200,9 +199,9 @@ GitLab's brand voice is **visionary, empathetic, intentional**. In the UI:
 
 ## 10. What I learned from using GitLab itself, and what changed because of it
 
-I explored gitlab.com as an anonymous visitor: the `gitlab-org/gitlab` Work items list and Issue boards, the label taxonomy, and the triage-ops policies. Section 4 of [`../research/gitlab-product-notes.md`](../research/gitlab-product-notes.md) covers why I didn't sign up for a Free account myself. These are the design decisions that came out of it:
+I explored gitlab.com as an anonymous visitor: the `gitlab-org/gitlab` Work items list and Issue boards, the label taxonomy, and the triage-ops policies. [`../research/gitlab-product-notes.md`](../research/gitlab-product-notes.md) has the full notes, including the Free-tier status. These are the design decisions that came out of it:
 
-1. **Scoped labels are the triage output format.** GitLab already teaches its people to read `workflow::`, `type::`, `devops::` and `section::` at a glance. So the triage agent emits `tier::now`, `theme::research-ops`, `effort::M`. There's nothing new to learn.
+1. **Scoped labels are the triage output format.** GitLab already teaches its people to read `type::`, `devops::` and `section::` at a glance. So the triage agent emits `tier::now`, `theme::research-ops`, `effort::M`. There's nothing new to learn. Lifecycle uses statuses, because that's where GitLab moved it (workflow labels have been unsupported since 2026-02-27).
 2. **Work items list, not a bespoke dashboard.** The backlog reads like a GitLab list, sortable and filterable, with the reference ID in the meta line. A GitLab PM would know how to use it without training.
 3. **Boards for themes.** GitLab plans on boards with scoped-label columns. The backlog's board view uses `tier::` columns.
 4. **Grey canvas plus white panel.** The 2025–26 "paneled" UI puts the sidebar directly on a `#ECECEF` canvas and content in a rounded white panel. I matched it exactly so the product doesn't look a version behind.
